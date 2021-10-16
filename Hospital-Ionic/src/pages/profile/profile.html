@@ -1,0 +1,47 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Mi Perfil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <img src="{{ url + 'get-image/' + identity.image }}" *ngIf="identity.image">
+        <img class="userimg" src="../../assets/imgs/user.png" *ngIf="!identity.image" />
+      </ion-card>
+      <ion-list>
+          <ion-item>
+            <ion-label color="primary" floating>Nombres</ion-label>
+            <ion-input type="text" name="firstName" #firstName="ngModel" [(ngModel)]="client.firstName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" floating>Apellidos</ion-label>
+            <ion-input type="text" name="lastName" #lastName="ngModel" [(ngModel)]="client.lastName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" floating>Nit</ion-label>
+            <ion-input type="tel" name="nit" #nit="ngModel" [(ngModel)]="client.nit"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" floating>DPI</ion-label>
+            <ion-input type="tel" name="dpi" #dpi="ngModel" [(ngModel)]="client.dpi"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" floating>Telefono</ion-label>
+            <ion-input type="tel" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="client.phoneNumber"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" floating>Email</ion-label>
+            <ion-input type="text" name="email" #email="ngModel" [(ngModel)]="client.email"></ion-input>
+          </ion-item>
+        </ion-list>
+</ion-content>

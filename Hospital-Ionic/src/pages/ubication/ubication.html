@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Nuestras Instalaciones</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let C of listClinic">
+      <img src="../../assets/imgs/HeIn.png" style="background-color: gainsboro"/>
+    <ion-card-header>
+      <h1>{{C.ubication}}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{C.address}}</p>
+      <p>{{C.phoneNumber}}</p>
+      <p>{{C.email}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Registrarme</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h6 style="text-align: center;">Llena el siguiente Formulario.</h6>
+  <form #loginForm="ngForm" (ngSubmit)="confirm()">
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Nombres</ion-label>
+      <ion-input name="firstName" #firstName="ngModel" [(ngModel)]="user.firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Apellidos</ion-label>
+      <ion-input name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Nit</ion-label>
+      <ion-input type="tel" name="nit" #nit="ngModel" [(ngModel)]="user.nit"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>DPI</ion-label>
+      <ion-input type="tel" name="dpi" #dpi="ngModel" [(ngModel)]="user.dpi"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Telefono</ion-label>
+      <ion-input type="tel" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="user.phoneNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Email</ion-label>
+      <ion-input name="email" #email="ngModel" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Contrasena</ion-label>
+      <ion-input type="password" name="password" #password="ngModel" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-grid class="foot">
+      <ion-row style="text-align: center">
+        <ion-col class="col-auto">
+          <button type="submit" ion-button full round color="danger">Registrarme</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
